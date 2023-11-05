@@ -30,7 +30,7 @@ namespace WebApplication1
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Pantalla_;
+        protected global::System.Web.UI.WebControls.TextBox Pantalla_;
 
         /// <summary>
         /// Btn_2_raíz_x control.

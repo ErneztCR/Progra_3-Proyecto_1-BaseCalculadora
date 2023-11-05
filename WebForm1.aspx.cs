@@ -29,17 +29,14 @@ namespace WebApplication1
             // Alinear el texto al centro del label
             Pantalla_.Style["text-align"] = "center";
 
-            // Cambiar el tamaño de la fuente
-            Pantalla_.Style["font-size"] = "45px"; // Tamaño de fuente 24px
+            // Aplicar la fuente al Label
+            Pantalla_.Attributes["style"] = "font-family: 'Calculator', sans-serif;"; 
 
-            // Cambiar la fuente (por ejemplo, a 'Arial')
-            Pantalla_.Style["font-family"] = "Calculator";
+            // Cambiar el tamaño de la fuente
+            Pantalla_.Style["font-size"] = "45px";
 
             // Ajusta el espaciado entre los caracteres
             Pantalla_.Style["letter-spacing"] = "5px";
-
-            // Hace que el texto sea en negrita
-            //Pantalla_.Style["font-weight"] = "bold"; 
         }
 
         protected void Btn_0_Click(object sender, EventArgs e)
@@ -208,48 +205,126 @@ namespace WebApplication1
 
         protected void Btn_2_raíz_x_Click(object sender, EventArgs e)
         {
-
-
+            if (Global.activo == false)
+            {
+                float num = float.Parse(Pantalla_.Text);
+                Global.resultado = (float)Math.Sqrt(num);
+                Pantalla_.Text = Global.resultado.ToString();
+            }
         }
 
         protected void Btn_x_exp_y_Click(object sender, EventArgs e)
         {
-
+            if (Global.activo == false)
+            {
+                Global.num1 = float.Parse(Pantalla_.Text);
+                Global.operador = "^";
+                Pantalla_.Text = Pantalla_.Text + "^";
+                Global.activo = true;
+            }
         }
 
         protected void Btn_10_exp_x_Click(object sender, EventArgs e)
         {
-
+            if (Global.activo == false)
+            {
+                float x = float.Parse(Pantalla_.Text);
+                double resultado = Math.Pow(10, x);
+                Pantalla_.Text = resultado.ToString();
+            }
         }
 
         protected void Btn_log_Click(object sender, EventArgs e)
         {
-
+            if (Global.activo == false)
+            {
+                double numero = double.Parse(Pantalla_.Text);
+                if (numero > 0)
+                {
+                    double resultado = Math.Log10(numero);
+                    Pantalla_.Text = resultado.ToString();
+                }
+                else
+                {
+                    Pantalla_.Text = "Error"; // El numero digitado tiene que ser mayor a 0
+                }
+            }
         }
 
         protected void Btn_x_exp_2_Click(object sender, EventArgs e)
         {
+            if (Global.activo == false)
+            {
+                float x = float.Parse(Pantalla_.Text);
+                float resultado = x * x;
 
+                Pantalla_.Text = resultado.ToString();
+            }
         }
 
         protected void Btn_fact_Click(object sender, EventArgs e)
         {
+            if (Global.activo == false)
+            {
+                float numero = float.Parse(Pantalla_.Text);
 
+                float resultado = CalcularFactorial(numero);
+
+                Pantalla_.Text = resultado.ToString();
+            }
+        }
+
+        private float CalcularFactorial(float n)
+        {
+            if (n == 0)
+            {
+                return 1; // El factorial de 0 es 1
+            }
+            else
+            {
+                float factorial = 1;
+                for (int i = 1; i <= n; i++)
+                {
+                    factorial *= i;
+                }
+                return factorial;
+            }
         }
 
         protected void Btn_camb_sig_Click(object sender, EventArgs e)
         {
-
+            if (Global.activo == false && Pantalla_.Text.Length > 0)
+            {
+                double numero = double.Parse(Pantalla_.Text);
+                numero = -numero;
+                Pantalla_.Text = numero.ToString();
+            }
         }
 
         protected void Btn_coma_Click(object sender, EventArgs e)
         {
-
+            if (Global.activo == false)
+            {
+                Pantalla_.Text = Pantalla_.Text + ".";
+            }
+            else
+            {
+                Global.v2 += ".";
+                Pantalla_.Text = Pantalla_.Text + ".";
+            }
         }
 
         protected void Btn_c_Click(object sender, EventArgs e)
         {
+            Global.num1 = 0;
+            Global.num2 = 0;
+            Global.resultado = 0;
+            Global.activo = false;
+            Global.v2 = "";
+            Global.operador = "";
 
+            // Limpiar toda la pantalla
+            Pantalla_.Text = "";
         }
 
         protected void Btn_borrar_Click(object sender, EventArgs e)
@@ -264,7 +339,6 @@ namespace WebApplication1
 
         protected void Btn_igual_Click(object sender, EventArgs e)
         {
-            //Pantalla_.Text = Pantalla_.Text + "=" + (Global.num1 + Global.num2).ToString();
             switch (Global.operador)
             {
                 case "+":
@@ -282,6 +356,11 @@ namespace WebApplication1
                 case "/":
                     Global.resultado = Global.num1 / Global.num2;
                     Pantalla_.Text = Pantalla_.Text + "=" + Global.resultado.ToString();
+                    break;
+                case "^":
+                    Global.resultado = (float)Math.Pow(Global.num1, Global.num2);
+                    Pantalla_.Text = Global.resultado.ToString();
+                    Global.activo = false;
                     break;
             }
         }

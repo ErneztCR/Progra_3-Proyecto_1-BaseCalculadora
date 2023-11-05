@@ -6,94 +6,15 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>CALCULADORA WEB</title>
-    <link rel="stylesheet" type="text/css" href="estilos.css" />
-    <style type="text/css">
-    .Pantalla {
-            width: 73%;
-            height: 371px;
-            margin-right: 0px;
-        }
-        .Dos_Raíz_X{
-            height: 55px;
-        }
-        .C {
-            width: 84px;
-        }
-        .Borrar {
-            height: 55px;
-            width: 84px;
-        }
-        .Factorial {
-            width: 80px;
-        }
-        .División {
-            height: 55px;
-            width: 80px;
-        }
-        .X_Exp_Y {
-            width: 79px;
-        }
-        .num_7 {
-            height: 55px;
-            width: 79px;
-        }
-        .num_8 {
-            width: 79px;
-            height: 43px;
-        }
-        .num_9 {
-            width: 84px;
-            height: 43px;
-        }
-        .Multiplicación {
-            width: 80px;
-            height: 43px;
-        }
-        .Logaritmo {
-            height: 43px;
-        }
-        .num_1 {
-            height: 55px;
-            width: 72px;
-        }
-        .num_2 {
-            width: 72px;
-            height: 43px;
-        }
-        .num_3-Suma {
-            width: 72px;
-        }
-        .X_Exp_2{
-            width: 79px;
-            height: 61px;
-        }
-        .Cambio-Signo {
-            width: 84px;
-            height: 61px;
-        }
-        .num_0{
-            width: 80px;
-            height: 61px;
-        }
-        .Coma {
-            width: 72px;
-            height: 61px;
-        }
-        .Igual {
-            height: 61px;
-        }
-        .auto-style1 {
-            margin-top: 17px;
-        }
-        </style>
-
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap">
 </head>
-<body style="width: 422px; height: 423px">
+<body>
     <form id="form1" runat="server">
         <table class="Tabla_Calculadora" id="Calculadora_">
             <tr>
                 <td colspan="5">
-                    <asp:Label ID="Pantalla_" runat="server" BackColor="Black" Height="50px" Width="409px" CssClass="auto-style1"></asp:Label>
+                    <asp:TextBox ID="Pantalla_" runat="server" CssClass="Pantalla"></asp:TextBox>
                 </td>
             </tr>
             <tr>
