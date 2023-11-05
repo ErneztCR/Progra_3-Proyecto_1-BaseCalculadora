@@ -23,7 +23,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Pantalla_.ForeColor = System.Drawing.Color.Green;
         }
 
         protected void Btn_0_Click(object sender, EventArgs e)
