@@ -118,13 +118,13 @@
                     <asp:Button ID="Btn_x_exp_y" runat="server" Text="x^y" Font-Size="Medium" Height="54px" Width="79px" BorderStyle="None" />
                 </td>
                 <td class="num_7">
-                    <asp:Button ID="Btn_7" runat="server" Text="7" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_7" runat="server" Text="7" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_7_Click" />
                 </td>
                 <td class="num_8">
-                    <asp:Button ID="Btn_8" runat="server" Text="8" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_8" runat="server" Text="8" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_8_Click" />
                 </td>
                 <td class="num_9">
-                    <asp:Button ID="Btn_9" runat="server" Text="9" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_9" runat="server" Text="9" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_9_Click" />
                 </td>
                 <td class="Multiplicación">
                     <asp:Button ID="Btn_multiplicación" runat="server" Text="X" BackColor="#F4F4F4" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
@@ -135,13 +135,13 @@
                     <asp:Button ID="Btn_10_exp_x" runat="server" Text="10^x" BackColor="#F4F4F4" Font-Size="Medium" Height="54px" Width="79px" BorderStyle="None" />
                 </td>
                 <td class="num_4">
-                    <asp:Button ID="Btn_4" runat="server" Text="4" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_4" runat="server" Text="4" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_4_Click" />
                 </td>
                 <td class="num_5">
-                    <asp:Button ID="Btn_5" runat="server" Text="5" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_5" runat="server" Text="5" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_5_Click" />
                 </td>
                 <td class="num_6_<Resta">
-                    <asp:Button ID="Btn_6" runat="server" Text="6" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_6" runat="server" Text="6" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_6_Click" />
                 </td>
                 <td class="Factorial">
                     <asp:Button ID="Btn_resta" runat="server" Text="– " BackColor="#F4F4F4" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
@@ -155,13 +155,13 @@
                     <asp:Button ID="Btn_1" runat="server" Text="1" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_1_Click" />
                 </td>
                 <td class="num_2">
-                    <asp:Button ID="Btn_2" runat="server" Text="2" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_2" runat="server" Text="2" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_2_Click" />
                 </td>
                 <td class="mun_3-Suma">
-                    <asp:Button ID="Btn_3" runat="server" Text="3" BackColor="White" Font-Size="Large" Height="54px" Width="79px" CssClass="num_3-Suma" BorderStyle="None" />
+                    <asp:Button ID="Btn_3" runat="server" Text="3" BackColor="White" Font-Size="Large" Height="54px" Width="79px" CssClass="num_3-Suma" BorderStyle="None" OnClick="Btn_3_Click" />
                 </td>
                 <td class="Factorial">
-                    <asp:Button ID="Btn_suma" runat="server" Text="+" BackColor="#F4F4F4" Font-Size="Large" Height="54px" Width="79px" CssClass="num_3-Suma" BorderStyle="None" />
+                    <asp:Button ID="Btn_suma" runat="server" Text="+" BackColor="#F4F4F4" Font-Size="Large" Height="54px" Width="79px" CssClass="num_3-Suma" BorderStyle="None" OnClick="Btn_suma_Click" />
                 </td>
             </tr>
             <tr>
@@ -172,13 +172,13 @@
                     <asp:Button ID="Btn_camb_sig" runat="server" Text="±" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
                 </td>
                 <td class="num_0">
-                    <asp:Button ID="Btn_0" runat="server" Text="0" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" />
+                    <asp:Button ID="Btn_0" runat="server" Text="0" BackColor="White" Font-Size="Large" Height="54px" Width="79px" BorderStyle="None" OnClick="Btn_0_Click" />
                 </td>
                 <td class="Coma">
                     <asp:Button ID="Btn_coma" runat="server" Text="," BackColor="White" Font-Size="X-Large" Height="52px" Width="79px" BorderStyle="None" />
                 </td>
                 <td class="num_0">
-                    <asp:Button ID="Btn_igual" runat="server" Text="=" BackColor="#0066CC" ForeColor="White" Height="52px" Width="79px" BorderStyle="None" Font-Size="Large" />
+                    <asp:Button ID="Btn_igual" runat="server" Text="=" BackColor="#0066CC" ForeColor="White" Height="52px" Width="79px" BorderStyle="None" Font-Size="Large" OnClick="Btn_igual_Click" />
                 </td>
             </tr>
         </table>
