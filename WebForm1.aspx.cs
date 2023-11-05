@@ -23,7 +23,23 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Cambiar el texto a color verde
             Pantalla_.ForeColor = System.Drawing.Color.Green;
+
+            // Alinear el texto al centro del label
+            Pantalla_.Style["text-align"] = "center";
+
+            // Cambiar el tamaño de la fuente
+            Pantalla_.Style["font-size"] = "45px"; // Tamaño de fuente 24px
+
+            // Cambiar la fuente (por ejemplo, a 'Arial')
+            Pantalla_.Style["font-family"] = "Calculator";
+
+            // Ajusta el espaciado entre los caracteres
+            Pantalla_.Style["letter-spacing"] = "5px";
+
+            // Hace que el texto sea en negrita
+            //Pantalla_.Style["font-weight"] = "bold"; 
         }
 
         protected void Btn_0_Click(object sender, EventArgs e)
