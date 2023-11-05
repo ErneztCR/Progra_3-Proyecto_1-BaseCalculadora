@@ -1,0 +1,48 @@
+﻿﻿body {
+}
+
+.Tabla_Calculadora {
+    background-color: lightsteelblue;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+    .Tabla_Calculadora tr {
+        height: 60px;
+    }
+
+    .Tabla_Calculadora td {
+        text-align: center;
+        padding: 5px;
+    }
+
+    .Tabla_Calculadora .btn {
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+        font-size: 16px;
+        border: 1px solid #000;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .Tabla_Calculadora .Btn_igual {
+        background-color: #0066CC;
+        color: #FFF;
+        border-radius: 10px;
+    }
+
+    .Tabla_Calculadora .Btn_numero {
+        background-color: #FFF;
+        border-radius: 10px;
+    }
+
+    .Tabla_Calculadora .Btn_resta {
+        background-color: #F4F4F4;
+        border-radius: 10px;
+    }
+
+    .Tabla_Calculadora .Btn_suma {
+        background-color: #F4F4F4;
+        border-radius: 10px;
+    }
